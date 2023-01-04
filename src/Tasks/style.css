@@ -25,36 +25,36 @@
   height: 30px;
   width: 30px;
   background-color: hsl(348, 83%, 47%);
-  transition: 1s;
+  transition: 0.5s;
   color: white;
   border: none;
   cursor: pointer;
 }
 
 .tasks__button:hover {
-  transition: background 1s;
+  transition: background 0.5s;
   background-color: hsl(348, 83%, 57%);
 }
 
 .tasks__button:active {
   background-color: hsl(348, 83%, 67%);
-  transition: 1s;
+  transition: 0.5s;
   border: 1px solid hsl(348, 92%, 15%);
 }
 
 .tasks__button--done {
-  transition: 1s;
+  transition: 0.5s;
   background-color: hsl(120, 100%, 20%);
 }
 
 .tasks__button--done:hover {
-  transition: background 1s;
+  transition: background 0.5s;
   background-color: hsl(120, 100%, 30%);
 }
 
 .tasks__button--done:active {
   background-color: hsl(120, 100%, 40%);
-  transition: 1s;
+  transition: 0.5s;
   border: 1px solid hsl(120, 95%, 8%);
 }
 
