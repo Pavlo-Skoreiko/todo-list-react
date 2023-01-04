@@ -1,16 +1,16 @@
 .tasks {
+  margin: 0;
+  padding-left: 0;
+  padding: 20px;
+}
+
+.tasks__saction {
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-gap: 20px;
   padding: 10px;
   border-bottom: 1px solid #ddd;
   align-items: center;
-}
-
-.tasks__section {
-  margin: 0;
-  padding-left: 0;
-  padding: 20px;
 }
 
 .tasks__taskName {

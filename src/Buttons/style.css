@@ -1,4 +1,4 @@
-.buttons--list {
+.buttons__list {
     border: none;
     color: hsl(180, 100%, 25%);
     transition: color 0.5s;
@@ -7,12 +7,12 @@
     margin: 0 0 0 20px;
   }
   
-  .buttons--list:hover {
+  .buttons__list:hover {
     transition: color 1.5s;
     color: hsl(180, 67%, 41%);
   }
   
-  .buttons--list:disabled {
+  .buttons__list:disabled {
     color: rgb(184, 181, 181);
   }
 
@@ -22,7 +22,7 @@
   } 
   
    @media (max-width: 767px) {
-    .buttons--list {
+    .buttons__list {
       flex-basis: 100% ;
       margin: 10px;
     }
