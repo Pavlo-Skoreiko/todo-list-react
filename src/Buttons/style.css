@@ -8,7 +8,7 @@
   }
   
   .buttons__list:hover {
-    transition: color 1.5s;
+    transition: color 0.5s;
     color: hsl(180, 67%, 41%);
   }
   
