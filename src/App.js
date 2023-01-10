@@ -23,12 +23,10 @@ function App() {
 
   const toggleTaskDone = (id) => {
     setTasks((tasks) =>
-      tasks.map((task) => {
-        if (task.id === id) {
-          return { ...task, done: !task.done };
-        }
-        return task;
-      }));
+      tasks.map((task) =>
+        task.id === id ? {...task, done: !task.done}
+          : task
+      ));
   };
 
   const setAllDone = () => {
@@ -36,26 +34,28 @@ function App() {
       tasks.map((task) => ({
         ...task,
         done: true,
-      })));
+      }))
+    );
   };
 
   const addNewTask = (content) => {
-    if (content !=="") 
-    setTasks(tasks => [
-      ...tasks,
-      {
-        content,
-        done: false,
-        id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
-      },
-    ]);
+    if (content !== "")
+      setTasks((tasks) => [
+        ...tasks,
+        {
+          content,
+          done: false,
+          id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
+        },
+      ]);
   };
 
   return (
     <Container className="container">
       <Header title="Lista zadań" />
-      <Section title="Dodaj nowe zadanie"
-      body={<Form addNewTask={addNewTask} />}
+      <Section
+        title="Dodaj nowe zadanie"
+        body={<Form addNewTask={addNewTask} />}
       />
 
       <Section
