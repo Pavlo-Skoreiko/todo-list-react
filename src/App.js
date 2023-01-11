@@ -8,10 +8,9 @@ import { useState } from "react";
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
-  const [tasks, setTasks] = useState([
-    { id: 1, content: "przejsc na Reacta", done: true },
-    { id: 2, content: " zjesc kolacje", done: false },
-  ]);
+  const [tasks, setTasks] = useState(
+    JSON.parse(localStorage.getItem("tasks")) || []
+  );
 
   const toggleHideDone = () => {
     setHideDone((hideDone) => !hideDone);
@@ -24,9 +23,9 @@ function App() {
   const toggleTaskDone = (id) => {
     setTasks((tasks) =>
       tasks.map((task) =>
-        task.id === id ? {...task, done: !task.done}
-          : task
-      ));
+        task.id === id ? { ...task, done: !task.done } : task
+      )
+    );
   };
 
   const setAllDone = () => {
@@ -49,6 +48,8 @@ function App() {
         },
       ]);
   };
+
+  const tasksStorage = localStorage.setItem("tasks", JSON.stringify(tasks));
 
   return (
     <Container className="container">
