@@ -4,60 +4,27 @@ import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
-import { useEffect, useState, useRef } from "react";
+import useTasks from "./useTasks"
+import { useState } from "react";
+  
+
 
 function App() {
-  const inputRef = useRef(null);
-
-  const focusInrut = () => {
-    inputRef.current.focus();
-  };
-
-  const [hideDone, setHideDone] = useState(false);
-  const [tasks, setTasks] = useState(
-    JSON.parse(localStorage.getItem("tasks")) || []
-  );
-
-  useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  }, [tasks]);
-
-  const toggleHideDone = () => {
+const [hideDone, setHideDone] = useState(false);
+  
+const toggleHideDone = () => {
     setHideDone((hideDone) => !hideDone);
   };
 
-  const removeTask = (id) => {
-    setTasks((tasks) => tasks.filter((task) => task.id !== id));
-  };
-
-  const toggleTaskDone = (id) => {
-    setTasks((tasks) =>
-      tasks.map((task) =>
-        task.id === id ? { ...task, done: !task.done } : task
-      )
-    );
-  };
-
-  const setAllDone = () => {
-    setTasks((tasks) =>
-      tasks.map((task) => ({
-        ...task,
-        done: true,
-      }))
-    );
-  };
-
-  const addNewTask = (content) => {
-    if (content !== "")
-      setTasks((tasks) => [
-        ...tasks,
-        {
-          content,
-          done: false,
-          id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
-        },
-      ]);
-  };
+const {
+    tasks,
+    inputRef,
+    focusInrut,
+    addNewTask,
+    removeTask,
+    toggleTaskDone,
+    setAllDone,
+  } = useTasks();
 
   return (
     <Container className="container">
