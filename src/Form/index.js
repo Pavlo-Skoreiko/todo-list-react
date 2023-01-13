@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./style.css";
 
-const Form = ({addNewTask}) => {
+const Form = ({addNewTask, focusInrut, inputRef}) => {
   const [newTaskContent, setNewTaskContent] = useState("");
 
   const onFormSubmit = (event) => {
@@ -13,12 +13,13 @@ const Form = ({addNewTask}) => {
   return (
     <form className="form" onSubmit={onFormSubmit}>
       <input
+        ref={inputRef}
         value={newTaskContent}
         className="form__input"
         placeholder="Co jest do zrobienia?"
         onChange={({ target }) => setNewTaskContent(target.value)}
       />
-      <button className="form__addButton">Dodaj zadanie</button>
+      <button onClick={focusInrut} className="form__addButton">Dodaj zadanie</button>
     </form>
   );
 };

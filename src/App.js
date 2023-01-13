@@ -4,9 +4,15 @@ import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 function App() {
+  const inputRef = useRef(null);
+
+  const focusInrut = () => {
+    inputRef.current.focus();
+  };
+
   const [hideDone, setHideDone] = useState(false);
   const [tasks, setTasks] = useState(
     JSON.parse(localStorage.getItem("tasks")) || []
@@ -58,9 +64,14 @@ function App() {
       <Header title="Lista zadań" />
       <Section
         title="Dodaj nowe zadanie"
-        body={<Form addNewTask={addNewTask} />}
+        body={
+          <Form
+            inputRef={inputRef}
+            focusInrut={focusInrut}
+            addNewTask={addNewTask}
+          />
+        }
       />
-
       <Section
         title="Lista zadań"
         body={
