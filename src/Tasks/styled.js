@@ -33,33 +33,31 @@ export const Button = styled.button`
   padding: 0;
   cursor: pointer;
   transition: background 0.3s;
+`;
+export const ToggleDoneButton = styled(Button)`
+  background-color: hsl(120, 100%, 20%);
 
-  ${({ toggleDone }) => toggleDone && css`
-      background-color: hsl(120, 100%, 20%);
+  &:hover {
+    background-color: hsl(120, 100%, 30%);
+  }
 
-      &:hover {
-        background-color: hsl(120, 100%, 30%);
-      }
+  &:active {
+    background-color: hsl(120, 100%, 40%);
+    transition: 0.5s;
+    border: 1px solid hsl(120, 95%, 8%);
+  }
+`;
 
-      &:active {
-        background-color: hsl(120, 100%, 40%);
-        transition: 0.5s;
-        border: 1px solid hsl(120, 95%, 8%);
-      }
+export const RemoveButton = styled(Button)`
+  background-color: hsl(348, 83%, 47%);
 
-    `}
+  &:hover {
+    background-color: hsl(348, 83%, 57%);
+  }
 
-  ${({ remove }) => remove && css`
-      background-color: hsl(348, 83%, 47%);
-
-      &:hover {
-        background-color: hsl(348, 83%, 57%);
-      }
-
-      &:active {
-        background-color: hsl(348, 83%, 67%);
-        transition: 0.3s;
-        border: 1px solid hsl(348, 92%, 15%);
-      }
-   `}
+  &:active {
+    background-color: hsl(348, 83%, 67%);
+    transition: 0.3s;
+    border: 1px solid hsl(348, 92%, 15%);
+  }
 `;
