@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, } from "react";
 
 const useTasks = () => {
   const [tasks, setTasks] = useState(
@@ -42,20 +42,12 @@ const useTasks = () => {
     );
   };
 
-  const inputRef = useRef(null);
-
-  const focusInput = () => {
-    inputRef.current.focus();
-  };
-
-  return {
+return {
     tasks,
     addNewTask,
     removeTask,
     setAllDone,
     toggleTaskDone,
-    inputRef,
-    focusInput,
   };
 };
 
