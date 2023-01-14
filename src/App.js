@@ -3,9 +3,9 @@ import Tasks from "./Tasks";
 import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
-import Container from "./Container";
 import useTasks from "./useTasks"
 import { useState } from "react";
+import { Container } from "./Container/styled"
 
 function App() {
 const [hideDone, setHideDone] = useState(false);
@@ -17,7 +17,7 @@ const toggleHideDone = () => {
 const {
     tasks,
     inputRef,
-    focusInrut,
+    focusInput,
     addNewTask,
     removeTask,
     toggleTaskDone,
@@ -25,14 +25,14 @@ const {
   } = useTasks();
 
   return (
-    <Container className="container">
+    <Container>
       <Header title="Lista zadań" />
       <Section
         title="Dodaj nowe zadanie"
         body={
           <Form
             inputRef={inputRef}
-            focusInrut={focusInrut}
+            focusInput={focusInput}
             addNewTask={addNewTask}
           />
         }

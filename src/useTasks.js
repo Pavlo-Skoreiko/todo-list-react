@@ -44,7 +44,7 @@ const useTasks = () => {
 
   const inputRef = useRef(null);
 
-  const focusInrut = () => {
+  const focusInput = () => {
     inputRef.current.focus();
   };
 
@@ -55,7 +55,7 @@ const useTasks = () => {
     setAllDone,
     toggleTaskDone,
     inputRef,
-    focusInrut,
+    focusInput,
   };
 };
 

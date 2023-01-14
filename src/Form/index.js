@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Field, Input, Button } from "./styled"
 
 
-const Form = ({addNewTask, focusInrut, inputRef}) => {
+const Form = ({addNewTask, focusInput, inputRef}) => {
   const [newTaskContent, setNewTaskContent] = useState("");
 
   const onFormSubmit = (event) => {
@@ -19,7 +19,7 @@ const Form = ({addNewTask, focusInrut, inputRef}) => {
         placeholder="Co jest do zrobienia?"
         onChange={({ target }) => setNewTaskContent(target.value)}
       />
-      <Button onClick={focusInrut} >Dodaj zadanie</Button>
+      <Button onClick={focusInput} >Dodaj zadanie</Button>
     </Field>
   );
 };
