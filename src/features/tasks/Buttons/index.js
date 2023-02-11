@@ -1,13 +1,17 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleHideDone, setAllDone, selectAreTasksEmpty, selectHideDone, selectIsEveryTaskDone } from "../tasksSlice";
+import { toggleHideDone, 
+  setAllDone, 
+  selectAreTasksEmpty, 
+  selectHideDone, 
+  selectIsEveryTaskDone } from "../tasksSlice";
 import { StyledButtons, Button } from "./styled";
 
 const Buttons = () => {
   const areTasksEmpty = useSelector(selectAreTasksEmpty);
   const isEveryTaskDone = useSelector(selectIsEveryTaskDone);
   const hideDone = useSelector(selectHideDone);
-  // const { tasks, hideDone } = useSelector(selectTasks);
+  
   const dispatch = useDispatch();
   return (
     <StyledButtons>
