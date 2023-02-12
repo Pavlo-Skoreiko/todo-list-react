@@ -10,14 +10,18 @@ export default () => (
       title="Pavlo Skoreiko"
       body={
         <>
-        <Wrapper>
-          Witam, nazywam się Pavlo Skoreiko. Jestem studentem informatyki na
-          Uniwersytecie Jagiellońskim. Zajmuję się programowaniem od 2015 roku.
-          <p>W tym czasie zdobyłem wiele doświadczenia w tworzeniu stron
-          internetowych, aplikacji mobilnych oraz aplikacji desktopowych. W
-          wolnym czasie lubię grać w gry komputerowe, oglądać filmy oraz seriale
-          oraz czytać książki.</p>
-        </Wrapper>
+          <Wrapper>
+            Ta aplikacja została stworzona przez początkującego programistę,
+            podczas nauki na internetowym kursie front-developera.<br></br>
+            Witam, nazywam się Pavlo Skoreiko. Jestem pracownikiem budowlanym,
+            mistrzem maszynowego tynkowania gipsowego, w wolnym czasie studiuję
+            naukę programowania.
+            <p>
+              Na tych kursach zdobyłem ogromną wiedzę z zakresu tworzenia stron
+              internetowych. Mam nadzieję, że kiedyś zostanę mistrzem w zawodzie
+              front-developera. 🧐
+            </p>
+          </Wrapper>
         </>
       }
     />
