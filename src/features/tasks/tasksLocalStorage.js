@@ -1,3 +1,4 @@
+
 const localStorageKey = "tasks";
 
 export const saveTasksInlocalStorage = tasks => 
@@ -5,3 +6,4 @@ export const saveTasksInlocalStorage = tasks =>
 
 export const getTasksFromLocalStorage = () =>
     JSON.parse(localStorage.getItem(localStorageKey)) || [];   
+

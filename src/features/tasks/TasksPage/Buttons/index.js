@@ -4,8 +4,9 @@ import { toggleHideDone,
   setAllDone, 
   selectAreTasksEmpty, 
   selectHideDone, 
-  selectIsEveryTaskDone } from "../tasksSlice";
-import { StyledButtons, Button } from "./styled";
+  selectIsEveryTaskDone } from "../../tasksSlice";
+import { StyledButtons } from "./styled";
+import Button from "../Button";
 
 const Buttons = () => {
   const areTasksEmpty = useSelector(selectAreTasksEmpty);
