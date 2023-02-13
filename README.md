@@ -11,6 +11,12 @@ In my website I used this technologies:
 - CSS
 - Java Script
 - BEM
+- React
+- React Redux
+- React Router
+- Redux Saga
+- Redux Toolkit
+- Styled Components
 
 ## Demo:
 
