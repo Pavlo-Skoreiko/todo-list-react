@@ -12,13 +12,12 @@ import Search from "./Search";
 
 function TasksPage() {
   const inputRef = useRef(null);
+  const dispatch = useDispatch();
+  const loading = useSelector(selectLoading);
 
   const focusInput = () => {
     inputRef.current.focus();
   };
-  const dispatch = useDispatch();
-
-  const loading = useSelector(selectLoading);
 
   return (
     <Container>
